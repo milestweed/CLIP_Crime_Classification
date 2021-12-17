@@ -130,7 +130,6 @@ def classify(video_path: str, name: str, cls_type: int=1):
         conf, pred = torch.max(out[0].data, 0)
         os.system('cls' if os.name == 'nt' else 'clear')
         
-        print(out)
         
         # Report result using terminal output
         print(f"The model's prediction for the video '{name}' is:")
