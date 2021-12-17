@@ -103,7 +103,7 @@ def classify(video_path: str, name: str, cls_type: int=1):
         state_dict_path = os.path.join(weight_dir, 'anomaly_model2_full_embedDS')
         model = ANOMALY_CLIP_LSTM2().to(_DEVICE)
         model.load_state_dict(torch.load(state_dict_path))
-        decoder = {0:'Normal', 1:'Anomaly'}
+        decoder = {0:'Anomaly', 1:'Normal'}
     else:
         state_dict_path = os.path.join(weight_dir, 'all_class_all_bal_mod')
         model = CLIP_LSTM().to(_DEVICE)
@@ -114,15 +114,23 @@ def classify(video_path: str, name: str, cls_type: int=1):
 
     with torch.no_grad():
         
+        # reduce sequence size to that used in training (300 frames)
+        #idx = np.random.choice(embedded.shape[0], size=300, replace=False)
+        #idx.sort()
+        #embedded = embedded[idx,:]
+        
         # batch of 5 required for analysis
         embedded = torch.stack([embedded, embedded, embedded, embedded, embedded])
         
         # Run model on embedded data
         out = model(embedded.to(_DEVICE))
         
+        
         # calculate prediction using one on 5 outputs
         conf, pred = torch.max(out[0].data, 0)
         os.system('cls' if os.name == 'nt' else 'clear')
+        
+        print(out)
         
         # Report result using terminal output
         print(f"The model's prediction for the video '{name}' is:")

@@ -131,9 +131,8 @@ def main():
     clip_root = os.path.join(root_dir, clip_ds_dir)
 
     # label_dict = joblib.load(os.path.join(root, 'class_labs.pkl'))
-
     # label_decode = {i:lab for lab, i in label_dict.items()}
-    label_decode = {0:'Normal', 1:'Anomaly'}
+    label_decode = {0:'Anomaly', 1:'Normal'}
 
     # Define device
     device = "cuda" if torch.cuda.is_available() else "cpu"
