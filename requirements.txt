@@ -1,0 +1,11 @@
+clip
+cv2
+decord
+ftfy
+numpy
+pandas
+PIL
+matplotlib
+pytorch=1.7.1
+torch
+tqdm
