@@ -73,7 +73,9 @@ def frames_to_embed(input_path):
 
 
 def classify(video_path: str, name: str, cls_type: int=1):
-
+    '''
+        Input:
+    '''
     os.system('cls' if os.name == 'nt' else 'clear')
     embedded = frames_to_embed(video_path)
 
