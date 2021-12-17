@@ -20,6 +20,12 @@ from sklearn.metrics import classification_report
 
 from model import ANOMALY_CLIP_LSTM
 
+'''
+    Training paradigm for the clip embedded LSTM models.  This version makes use of the UCF-Crime
+    dataset after it has been converted into an image sequence dataset using the data_format.py script.
+'''
+
+
 
 ap = ArgumentParser()
 ap.add_argument('-n', '--name', type=str, required=True, help='Name used when saving the state_dict')
