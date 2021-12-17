@@ -5,6 +5,10 @@ import torch.nn.functional as F
 
 
 class INIT_CLIP_LSTM(nn.Module):
+    
+    '''
+        Initial multi-class model structure
+    '''
 
     def __init__(self):
         super(INIT_CLIP_LSTM, self).__init__()
@@ -38,6 +42,10 @@ class INIT_CLIP_LSTM(nn.Module):
 
 
 class CLIP_LSTM(nn.Module):
+    
+    '''
+        Modified multi-class model structure
+    '''
 
     def __init__(self):
         super(CLIP_LSTM, self).__init__()
@@ -76,7 +84,11 @@ class CLIP_LSTM(nn.Module):
 
 
 class ANOMALY_CLIP_LSTM(nn.Module):
-
+    
+    '''
+        Initial anomaly detection model structure
+    
+    '''
     def __init__(self):
         super(ANOMALY_CLIP_LSTM, self).__init__()
 
@@ -107,7 +119,10 @@ class ANOMALY_CLIP_LSTM(nn.Module):
 
 
 class ANOMALY_CLIP_LSTM2(nn.Module):
-
+    '''
+        Modified anomaly detection model structure
+    
+    '''
     def __init__(self):
         super(ANOMALY_CLIP_LSTM2, self).__init__()
 
@@ -146,6 +161,9 @@ class ANOMALY_CLIP_LSTM2(nn.Module):
 
 
 class ANOMALY_CLIP_LSTM3(nn.Module):
+    '''
+        Simplified anomaly model structure (not used or reported in analysis)
+    '''
 
     def __init__(self):
         super(ANOMALY_CLIP_LSTM3, self).__init__()
