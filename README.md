@@ -15,3 +15,13 @@ While typical image classification models train an image feature extractor and a
 Clone the repo and the required packages can be found in the required.txt file.  Running classifier.py will start an interactive application that will attempt to perform anomaly detection or multi-class classification on videos found in the 'Videos' directory. 
 
 The scripts that were used to create the image sequence database from the video files of the UCF-Crime dataset as well as the training scripts and models can be found in the src directory.
+
+
+## Contributors
+
+Originally developed collaboratively in 2021 by:
+
+- [Miles Tweed](https://github.com/milestweed)
+- [Conor Howlett](https://github.com/Chowlett2)
+
+The original Git history primarily reflects commits made through Miles's account because code was exchanged and consolidated outside Git during the initial collaboration.
